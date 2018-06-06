@@ -24,7 +24,7 @@ class BeachHead(object):
                         'CREATE (a)-[k:KNOWS]->(b)'
                         'SET k.type = {type}'
                         'CREATE (b)-[l:KNOWS]->(a)'
-                        'SET l.type = {rel}', a=a, b=b, type=rel)
+                        'SET l.type = {rel}', a=a, b=b, rel=rel)
 
     def query(self, query):
         with self._driver.session() as session:
